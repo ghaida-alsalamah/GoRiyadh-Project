@@ -1,14 +1,14 @@
 # RiyadhGo-Project
-Project Title
+# Project Title
 
 GoRiyadh
 
-Project Description
+ # Project Description
 
 This project is an AI-powered smart tourist guide for Riyadh.
 It helps users plan their stay by estimating costs and recommending hotels, restaurants, and cafes using machine learning and Retrieval-Augmented Generation (RAG).
 
-Project Goals
+# Project Goals
 
 Analyze hotels, restaurants, and cafes datasets in Riyadh
 
@@ -18,7 +18,7 @@ Provide smart recommendations based on user preferences
 
 Generate daily plans for tourists using RAG
 
-Datasets
+# Datasets
 
 The project uses three datasets:
 
