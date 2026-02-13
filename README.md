@@ -1,4 +1,4 @@
-# RiyadhGo-Project
+# GoRiyadh-Project
 # Project Title
 
 GoRiyadh
