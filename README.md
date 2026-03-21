@@ -29,3 +29,10 @@ Restaurants in Riyadh
 Cafes in Riyadh
 
 (Details will be added later.)
+
+# Team Members
+-Ghaida Alsalamah 
+-Layan Alsulaiman 
+-Lama Faden 
+-Muneera Alsaeed 
+-Sara Alhamdan
