@@ -77,24 +77,27 @@ Data preprocessing includes:
 
 ## 📁 Project Structure
 
+## 📁 Project Structure
+
+```
 GoRiyadh/
 │
-├── api.py # FastAPI endpoints
-├── rag_engine.py # RAG logic (FAISS + LLM)
-├── data_loader.py # Data preprocessing
-├── fetch_images.py # Image handling
+├── api.py                # FastAPI endpoints
+├── rag_engine.py        # RAG logic (FAISS + LLM)
+├── data_loader.py       # Data preprocessing
+├── fetch_images.py      # Image handling
 ├── requirements.txt
 │
-├── frontend/ # UI (HTML/CSS/JS)
-│ ├── index.html
-│ ├── app.js
-│ └── style.css
+├── frontend/            # UI (HTML/CSS/JS)
+│   ├── index.html
+│   ├── app.js
+│   └── style.css
 │
-├── index.faiss # Vector index
-├── metadata.pkl # Data mapping
+├── index.faiss          # Vector index
+├── metadata.pkl         # Data mapping
 │
 └── datasets/
-
+```
 --
 
 ## ▶️ How to Run
