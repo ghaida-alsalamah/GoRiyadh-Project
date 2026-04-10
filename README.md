@@ -1,44 +1,51 @@
 # 🌆 GoRiyadh – AI Tourist Guide for Riyadh
 
 ## 📌 Overview
-**GoRiyadh** is an AI-powered tourist guide designed to help users explore Riyadh efficiently.  
-It provides smart recommendations for hotels, restaurants, and cafes using a **Retrieval-Augmented Generation (RAG)** system combined with real-world datasets.
+**GoRiyadh** is an AI-powered tourist guide that helps users explore Riyadh by providing smart recommendations for hotels, restaurants, and cafes.
+
+The system uses a **Retrieval-Augmented Generation (RAG)** architecture to understand user queries and generate personalized suggestions, along with interactive features like exploration, filtering, and itinerary planning.
+
+---
+## 🔗 Live Demo 
+
+https://goriyadh.onrender.com/
 
 ---
 
 ## 🚀 Features
 
-- 🏨 Personalized recommendations for hotels, restaurants, and cafes
+- 🏨 Recommendations for hotels, restaurants, and cafes
 - 🗺️ Explore section with filters (rating, price, district)
-- 🧠 AI-generated responses using a large language model (LLM)
+- 📊 Data-driven insights from real Riyadh datasets
+- 🧠 AI-generated responses using LLM
 - 🔍 Smart search using natural language (e.g., *“cheap cafes in Olaya”*)
-- 📅 Simple itinerary generation based on user preferences
-- 🌐 Interactive and responsive user interface
+- 📅 Basic itinerary generation based on user preferences
+- 🌐 Interactive frontend with modern UI
 
 ---
 
 ## 🧠 System Architecture
 
-The system follows a **RAG (Retrieval-Augmented Generation)** pipeline:
+The project follows a **RAG (Retrieval-Augmented Generation)** pipeline:
 
-1. User submits a query  
+1. User sends a query  
 2. Query is converted into embeddings  
-3. Relevant data is retrieved using FAISS  
-4. Retrieved results are passed to the LLM  
-5. Final response is generated and returned  
+3. Relevant places are retrieved using FAISS  
+4. Retrieved data is passed to an LLM  
+5. Final response is generated and returned to the user  
 
 ---
 
 ## ⚙️ Tech Stack
 
 ### 🔹 Backend
-- FastAPI  
-- Uvicorn  
+- FastAPI – API development  
+- Uvicorn – ASGI server  
 
 ### 🔹 RAG Engine
-- Sentence Transformers (`all-MiniLM-L6-v2`)  
-- FAISS (Vector Search)  
-- Groq LLM (`llama-3.3-70b-versatile`)  
+- Embeddings: Sentence Transformers (`all-MiniLM-L6-v2`)  
+- Vector Search: FAISS  
+- LLM: Groq (`llama-3.3-70b-versatile`)  
 
 ### 🔹 Frontend
 - HTML  
@@ -49,22 +56,22 @@ The system follows a **RAG (Retrieval-Augmented Generation)** pipeline:
 - Pandas  
 
 ### 🔹 Deployment
-- Render  
+- Render (Backend hosting)
 
 ---
 
 ## 📊 Datasets
 
-The project uses real datasets from Riyadh:
+The system is built using real datasets from Riyadh:
 
 - 🏨 Hotels dataset  
 - 🍽️ Restaurants dataset (~19K records after filtering)  
 - ☕ Cafes dataset (~2.6K records)
 
-### Data Processing Steps:
-- Data cleaning and normalization  
-- Removing low-quality entries  
-- Unifying structure (name, rating, price, district, description)
+Data preprocessing includes:
+- Cleaning and normalization  
+- Filtering low-quality entries  
+- Merging into a unified structure (name, rating, price, district, description)
 
 ---
 
@@ -72,19 +79,21 @@ The project uses real datasets from Riyadh:
 
 GoRiyadh/
 │
-├── api.py
-├── rag_engine.py
-├── data_loader.py
-├── fetch_images.py
+├── api.py # FastAPI endpoints
+├── rag_engine.py # RAG logic (FAISS + LLM)
+├── data_loader.py # Data preprocessing
+├── fetch_images.py # Image handling
 ├── requirements.txt
 │
-├── frontend/
+├── frontend/ # UI (HTML/CSS/JS)
 │ ├── index.html
 │ ├── app.js
 │ └── style.css
 │
-├── index.faiss
-├── metadata.pkl
+├── index.faiss # Vector index
+├── metadata.pkl # Data mapping
+│
+└── datasets/
 
 --
 
@@ -93,8 +102,12 @@ GoRiyadh/
 ### 1. Install dependencies
 ```bash
 pip install fastapi uvicorn python-multipart
+```
+
 ### 2. Run backend
+```
 uvicorn api:app --reload
+```
 
 ### 3. Open application
 - API Docs: http://localhost:8000/docs  
@@ -132,5 +145,3 @@ uvicorn api:app --reload
 ## 📌 Notes
 
 This project demonstrates the use of AI, RAG systems, and data-driven recommendations in a real-world tourism application.
-
-
